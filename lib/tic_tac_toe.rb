@@ -36,3 +36,4 @@ end
 
 def valid_move?(board,position)
   !position_taken?(board,position)
+end
