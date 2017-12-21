@@ -44,5 +44,6 @@ def turn(board)
   display_board(board)
   puts "Enter number"
   input = gets.strip
-  move(board,input,"X")
+  index = input_to_index(input)
+  move(board,index,"X")
 end
