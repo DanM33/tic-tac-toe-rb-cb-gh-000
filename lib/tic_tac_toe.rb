@@ -17,3 +17,11 @@ def display_board(board)
   puts "-----------"
   puts " #{board[0]} | #{board[1]} | #{board[2]} "
 end
+
+def input_to_index(user_input)
+  return user_input.to_i -1
+end
+
+def move(board,index,player)
+
+end
