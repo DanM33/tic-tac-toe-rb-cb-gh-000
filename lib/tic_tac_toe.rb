@@ -50,3 +50,13 @@ def turn(board)
   index = input_to_index(input)
   move(board,index,"X")
 end
+
+def turn_count(board)
+  turn_count = 0
+  board.each do |position|
+    if position == "X" || position == "O"
+      turn_count+=1
+    end
+  end
+  return turn_count
+end
