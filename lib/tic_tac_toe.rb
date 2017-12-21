@@ -48,7 +48,7 @@ def turn(board)
   puts "Enter number"
   input = gets.strip
   index = input_to_index(input)
-  move(board,index,"X")
+  move(board,index,current_player(board))
 end
 
 def turn_count(board)
