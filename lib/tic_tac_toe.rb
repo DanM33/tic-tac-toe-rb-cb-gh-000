@@ -88,3 +88,10 @@ end
 def over?(board)
   return draw?(board) || won?(board)
 end
+
+def winner(board)
+  if won?(board)
+    return board[won?(board)[0]]
+  end
+  return -1
+end
