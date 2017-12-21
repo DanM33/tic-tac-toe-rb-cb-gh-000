@@ -74,3 +74,9 @@ def won?(board)
     position_taken?(board, combination[0]) && board[combination[0]] == board[combination[1]] && board[combination[1]] == board[combination[2]]
   end
 end
+
+def full?(board)
+  return board.all? do |position|
+    position == "X" || position == "O"
+  end
+end
