@@ -26,14 +26,23 @@ def input_to_index(user_input)
   return -1
 end
 
-def move(board,index,player)
-  board[index]=player
+def move(board,position,player)
+  if valid_move?(board,position)
+    board[position]=player
+  end
 end
 
 def position_taken?(board,position)
-  board[position] == "X" || board[position] == "O"
+  return board[position] == "X" || board[position] == "O"
 end
 
 def valid_move?(board,position)
-  !position_taken?(board,position)
+  return !position_taken?(board,position)
+end
+
+def turn(board)
+  display_board(board)
+  puts "Enter number"
+  input = gets.strip
+  move(board,input,"X")
 end
