@@ -68,3 +68,9 @@ def current_player(board)
     return "O"
   end
 end
+
+def won?(board)
+  return WIN_COMBINATIONS.detect do |combination|
+    position_taken?(board[combination[0]]) && board[combination[0]] == board[combination[1]] && board[combination[1]] == board[combination[2]]
+  end
+end
