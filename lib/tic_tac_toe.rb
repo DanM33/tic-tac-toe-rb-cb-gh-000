@@ -19,7 +19,11 @@ def display_board(board)
 end
 
 def input_to_index(user_input)
-  return user_input.to_i -1
+  input = user_input.to_i
+  if input > 0 && input<=100
+    return user_input.to_i -1
+  end
+  return -1
 end
 
 def move(board,index,player)
