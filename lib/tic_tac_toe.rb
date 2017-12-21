@@ -29,6 +29,9 @@ end
 def move(board,position,player)
   if valid_move?(board,position)
     board[position]=player
+  else
+    puts "Invalid move"
+    turn(board)
   end
 end
 
